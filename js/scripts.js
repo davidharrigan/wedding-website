@@ -192,6 +192,8 @@ $(document).ready(function () {
             // Event duration (IN MINUTES)
             // duration: 120,
 
+            end: new Date('Jul 13, 2019 23:00'),
+
             // Event Address
             address: '195 Knox Mountain Rd, Sanbornton, NH 03269',
 
@@ -214,7 +216,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzq67HQS0hppRpoJzBaFTSWE76muSUBeZeaI7u8E_shA1RSoomr/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbz8bffMSUDvNx7eW-rMcNhiaCi6VFYgtRKCICMb/exec', data)
                 .done(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html('');
